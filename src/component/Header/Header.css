@@ -10,11 +10,28 @@
    font-size: 2.5rem;
 }
 
+.header__logo h2 {
+   animation: moveToLeft 1s ease-out;
+}
+
+.header__logo span {
+   color: var(--color-primary);
+}
+
 .header__user {
    width: 4.5rem;
    height: 4.5rem;
    border-radius: 10rem;
    overflow: hidden;
+   cursor: pointer;
+   opacity: 0.8;
+   transition: all 0.2s;
+
+   animation: moveToRight 1s ease-out;
+}
+
+.header__user:hover {
+   opacity: 1;
 }
 
 .header__user-img {
