@@ -18,11 +18,11 @@ const Blog = (props) => {
                </div>
                <div>
                   <h3 className="blog__author-name">{authorName}</h3>
-                  <p className="">{publish}</p>
+                  <p className="blog__publish">{publish}</p>
                </div>
             </div>
             <div>
-               <span className="blog__read-time">{readTime} min read </span>{" "}
+               <span className="blog__read-time">{readTime} min read </span>
                <FontAwesomeIcon icon={faBookmark} />
             </div>
          </div>
