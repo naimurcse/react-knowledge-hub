@@ -3,7 +3,7 @@ import "./Bookmark.css";
 
 const Bookmark = () => {
    return (
-      <div>
+      <div className="bookmark-section">
          <div className="spent-time">
             <h2 className="spent-time__text">Spent time on read : 177 min</h2>
          </div>

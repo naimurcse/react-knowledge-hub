@@ -3,6 +3,7 @@ import "./Blog.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 // import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+// import { faBookmark } from "@fortawesome/free-brands-svg-icons";
 
 const Blog = (props) => {
    console.log(props.blog);
@@ -24,6 +25,7 @@ const Blog = (props) => {
             <div>
                <span className="blog__read-time">{readTime} min read </span>
                <FontAwesomeIcon icon={faBookmark} />
+               {/* <FontAwesomeIcon icon="fa-solid fa-bookmark" /> */}
             </div>
          </div>
 
