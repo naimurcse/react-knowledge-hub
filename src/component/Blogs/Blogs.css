@@ -1,0 +1,13 @@
+.blogs {
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   gap: 3rem;
+   padding: 3rem 0;
+}
+.blogs__container {
+   /* background-color: red; */
+}
+
+.blogs__bookmark {
+   background-color: aqua;
+}

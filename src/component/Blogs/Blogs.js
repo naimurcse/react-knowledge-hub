@@ -12,13 +12,13 @@ const Blogs = () => {
    }, []);
 
    return (
-      <div>
-         <div>
+      <div className="blogs">
+         <div className="blogs__container">
             {blogs.map((blog) => (
                <Blog key={blog.id} blog={blog}></Blog>
             ))}
          </div>
-         <div>
+         <div className="blogs__bookmark">
             <Bookmark></Bookmark>
          </div>
       </div>
