@@ -9,18 +9,18 @@ const Bookmark = () => {
          </div>
 
          <div className="bookmark">
-            <h3>Bookmarked Blogs : 8</h3>
-            <div className="bookmark__title-container">
+            <h3 className="bookmark__counter">Bookmarked Blogs : 8</h3>
+            <div className="bookmark__title-box">
                <h4 className="bookmark__title">
                   Master Microsoft Power Platform and Become an In-Demand!
                </h4>
             </div>
-            <div className="bookmark__title-container">
+            <div className="bookmark__title-box">
                <h4 className="bookmark__title">
                   Master Microsoft Power Platform and Become an In-Demand!
                </h4>
             </div>
-            <div className="bookmark__title-container">
+            <div className="bookmark__title-box">
                <h4 className="bookmark__title">
                   Master Microsoft Power Platform and Become an In-Demand!
                </h4>

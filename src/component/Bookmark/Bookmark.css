@@ -1,0 +1,35 @@
+.spent-time {
+   background-color: var(--color-light-gray-bg);
+   border-radius: 0.8rem;
+   padding: 2.5rem;
+   margin-bottom: 2rem;
+   border: 1px solid var(--color-primary);
+   animation: moveToLeft 1s ease-out;
+}
+
+.spent-time__text {
+   color: var(--color-primary);
+}
+
+.bookmark {
+   background-color: var(--color-light-gray-bg);
+   border-radius: 0.8rem;
+   padding: 2.5rem;
+   animation: moveToLeft 1s ease-out;
+}
+
+.bookmark__counter {
+   font-size: 2.4rem;
+   margin-bottom: 1.5rem;
+}
+.bookmark__title-box {
+   background-color: var(--color-white);
+   margin-bottom: 1.5rem;
+   padding: 2rem;
+   border-radius: 0.8rem;
+}
+
+.bookmark__title {
+   line-height: 1.4;
+   font-weight: 400;
+}

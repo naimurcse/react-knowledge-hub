@@ -10,7 +10,8 @@
    --color-black: #111111;
 
    --color-dark-gray: rgba(17, 17, 17, 0.6);
-   --color-light-gray: #dddddd;
+   --color-light-gray: #dcdcdc;
+   --color-light-gray-bg: #efefef;
 }
 
 /* Basic Reset */
