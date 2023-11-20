@@ -8,7 +8,9 @@
 
    --color-white: #fff;
    --color-black: #111111;
+
    --color-dark-gray: rgba(17, 17, 17, 0.6);
+   --color-light-gray: #dddddd;
 }
 
 /* Basic Reset */

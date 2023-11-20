@@ -1,11 +1,17 @@
 import React from "react";
+import User from "../../images/user.jpg";
 import "./Header.css";
 
 const Header = () => {
    return (
-      <div>
-         <h1>Header</h1>
-      </div>
+      <header className="header">
+         <div className="header__logo">
+            <h2>Knowledge Hub</h2>
+         </div>
+         <div className="header__user">
+            <img className="header__user-img" src={User} alt="" />
+         </div>
+      </header>
    );
 };
 
