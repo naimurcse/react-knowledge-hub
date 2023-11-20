@@ -1,5 +1,8 @@
 import React from "react";
 import "./Blog.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark } from "@fortawesome/free-regular-svg-icons";
+// import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 const Blog = (props) => {
    console.log(props.blog);
@@ -14,16 +17,22 @@ const Blog = (props) => {
                   <img src={authorImage} alt="" className="blog__author-img" />
                </div>
                <div>
-                  <h3>{authorName}</h3>
-                  <p>{publish}</p>
+                  <h3 className="blog__author-name">{authorName}</h3>
+                  <p className="">{publish}</p>
                </div>
             </div>
             <div>
-               <p>{readTime} min read</p>
+               <span className="blog__read-time">{readTime} min read </span>{" "}
+               <FontAwesomeIcon icon={faBookmark} />
             </div>
          </div>
 
          <h2 className="blog__title">{blogTitle}</h2>
+         <p className="blog__hash">#beginners</p>
+         <p className="blog__hash">#programmer</p>
+         <a href="#" className="btn-secondary">
+            Mark as read
+         </a>
       </div>
    );
 };

@@ -42,7 +42,7 @@ h4,
 h5,
 h6 {
    font-family: "Exo 2", sans-serif;
-   font-size: 700;
+   font-weight: 700;
    color: var(--color-black);
 }
 
@@ -73,4 +73,14 @@ h6 {
       transform: translateX(0);
       opacity: 1;
    }
+}
+
+/* Button */
+.btn-secondary {
+   font-family: "Exo 2", sans-serif;
+   color: var(--color-primary);
+   font-size: 1.8rem;
+   font-weight: 600;
+   text-decoration-line: underline;
+   display: block;
 }
