@@ -1,6 +1,6 @@
 .blog {
-   padding-bottom: 3rem;
-   margin-bottom: 5rem;
+   padding-bottom: 2rem;
+   margin-bottom: 4rem;
    border-bottom: 1px solid var(--color-light-gray);
 
    animation: moveToUp 0.5s ease-out;
@@ -9,7 +9,7 @@
    display: block;
    max-width: 100%;
 
-   height: 35rem;
+   height: 24rem;
    width: 100%;
    object-fit: cover;
 
@@ -21,17 +21,17 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin-bottom: 3rem;
+   margin-bottom: 2rem;
 }
 .blog__author-container {
    display: flex;
-   gap: 2.5rem;
+   gap: 1.8rem;
    align-items: center;
 }
 
 .blog__author {
-   width: 4.5rem;
-   height: 4.5rem;
+   width: 3.6rem;
+   height: 3.6rem;
    border-radius: 10rem;
    overflow: hidden;
 }
@@ -44,41 +44,88 @@
 }
 
 .blog__author-name {
-   font-size: 2.4rem;
+   font-size: 1.8rem;
    line-height: normal;
 }
 .blog__read-time {
-   font-size: 2rem;
+   font-size: 1.6rem;
    font-weight: 500;
    line-height: normal;
    margin-right: 0.8rem;
 }
 
 .blog__publish {
-   font-size: 1.6rem;
-   font-weight: 600;
+   font-size: 1.4rem;
+   font-weight: 400;
 }
 
 .blog__title {
-   font-size: 3.2rem;
+   font-size: 2.2rem;
    line-height: 1.2;
 }
 
 .blog__hash {
    color: var(--color-dark-gray);
    font-family: Exo 2;
-   font-size: 1.8rem;
+   font-size: 1.6rem;
    font-weight: 500;
    display: inline-block;
-   margin-right: 2rem;
-   margin-top: 1rem;
-   margin-bottom: 1rem;
+   margin-right: 1.5rem;
+   margin-top: 0.8rem;
+   margin-bottom: 0.5rem;
 }
 
 .blog__bookmark-icon {
    cursor: pointer;
+   font-size: 1.6rem;
 }
 
 .blog__bookmark-icon:hover {
    color: var(--color-primary);
+}
+
+/* Larger than mobile devices */
+@media only screen and (min-width: 768px) {
+   .blog {
+      padding-bottom: 3rem;
+      margin-bottom: 5rem;
+   }
+   .blog__title {
+      font-size: 3rem;
+      line-height: 1.2;
+   }
+   .blog__author {
+      width: 4.5rem;
+      height: 4.5rem;
+   }
+   .blog__author-name {
+      font-size: 2.4rem;
+      line-height: normal;
+   }
+   .blog__publish {
+      font-size: 1.6rem;
+      font-weight: 600;
+   }
+   .blog__author-container {
+      gap: 2.5rem;
+   }
+   .blog__read-time {
+      font-size: 2rem;
+      font-weight: 500;
+   }
+   .blog__bookmark-icon {
+      font-size: 2rem;
+   }
+   .blog__info {
+      margin-bottom: 3rem;
+   }
+   .blog__hash {
+      font-size: 1.8rem;
+      margin-right: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+   }
+   .blog__cover {
+      height: 35rem;
+   }
 }

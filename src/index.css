@@ -113,8 +113,17 @@ h6 {
 .btn-secondary {
    font-family: "Exo 2", sans-serif;
    color: var(--color-primary);
-   font-size: 1.8rem;
+   font-size: 1.6rem;
    font-weight: 600;
    text-decoration-line: underline;
    display: block;
+}
+
+/* Media Query for Button */
+@media only screen and (min-width: 768px) {
+   /* Button */
+   .btn-secondary {
+      font-size: 1.8rem;
+      font-weight: 600;
+   }
 }
