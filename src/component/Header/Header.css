@@ -11,7 +11,7 @@
 }
 
 .header__logo h2 {
-   animation: moveToLeft 1s ease-out;
+   animation: moveToLeft 0.5s ease-out;
 }
 
 .header__logo span {
@@ -27,7 +27,7 @@
    opacity: 0.8;
    transition: all 0.2s;
 
-   animation: moveToRight 1s ease-out;
+   animation: moveToRight 0.5s ease-out;
 }
 
 .header__user:hover {

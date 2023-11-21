@@ -1,9 +1,17 @@
 .blogs {
    display: grid;
-   grid-template-columns: 2fr 1fr;
+   grid-template-columns: 1fr;
    gap: 3rem;
    padding: 3rem 0;
 }
+
+/* Larger than mobile devices */
+@media only screen and (min-width: 998px) {
+   .blogs {
+      grid-template-columns: 2fr 1fr;
+   }
+}
+
 .blogs__container {
    /* background-color: red; */
 }

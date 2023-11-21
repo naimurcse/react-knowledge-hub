@@ -3,7 +3,7 @@
    margin-bottom: 5rem;
    border-bottom: 1px solid var(--color-light-gray);
 
-   animation: moveToUp 1s ease-out;
+   animation: moveToUp 0.5s ease-out;
 }
 .blog__cover {
    display: block;
@@ -65,7 +65,7 @@
 }
 
 .blog__hash {
-   color: rgba(17, 17, 17, 0.6);
+   color: var(--color-dark-gray);
    font-family: Exo 2;
    font-size: 1.8rem;
    font-weight: 500;
