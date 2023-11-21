@@ -10,6 +10,7 @@
 .spent-time__text {
    color: var(--color-primary);
    text-align: center;
+   font-size: 2rem;
 }
 
 .bookmark {
@@ -20,8 +21,9 @@
 }
 
 .bookmark__counter {
-   font-size: 2.4rem;
-   margin-bottom: 1.5rem;
+   font-size: 2rem;
+   margin-bottom: 1.8rem;
+   font-weight: 600;
 }
 .bookmark__title-box {
    background-color: var(--color-white);
@@ -40,5 +42,13 @@
    .bookmark__title {
       line-height: 1.6;
       font-weight: 600;
+      color: var(--color-dark-gray);
+   }
+   .bookmark__counter {
+      font-size: 2.4rem;
+      font-weight: 700;
+   }
+   .spent-time__text {
+      font-size: 2.2rem;
    }
 }
