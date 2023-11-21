@@ -16,11 +16,20 @@ const Blogs = () => {
 
    const notify = () => toast.success("This is a success toast!");
 
-   const handleBookmark = (title, id) => {
-      console.log(title, id);
-      let newBookmark = [...bookmark, title];
-      setBookmark(newBookmark);
+   const handleBookmark = (newBlog) => {
+      // console.log(newBlog);
+      let newBookmark = [];
+      const savedBlog = bookmark.find((blog) => blog.id === newBlog.id);
+      if (!savedBlog) {
+         newBookmark = [...bookmark, newBlog];
+      } else {
+         newBookmark = [...bookmark];
+      }
+      // let newBookmark = [...bookmark, blog];
+      // console.log(savedBlog);
       notify();
+      setBookmark(newBookmark);
+      // console.log(bookmark);
    };
 
    const readTimeCount = (time) => {
@@ -41,7 +50,7 @@ const Blogs = () => {
             ))}
          </div>
          <div className="blogs__bookmark">
-            {<Bookmark bookmark={bookmark} spentTime={spentTime}></Bookmark>}
+            <Bookmark bookmark={bookmark} spentTime={spentTime}></Bookmark>
          </div>
       </div>
    );

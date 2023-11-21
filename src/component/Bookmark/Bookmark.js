@@ -3,8 +3,10 @@ import "./Bookmark.css";
 import Title from "../Title/Title";
 
 const Bookmark = (props) => {
-   const titles = props.bookmark;
+   const bookmarkedBlogs = props.bookmark;
+
    const spentTime = props.spentTime;
+
    return (
       <div className="bookmark-section">
          <div className="spent-time">
@@ -12,11 +14,13 @@ const Bookmark = (props) => {
          </div>
 
          <div className="bookmark">
-            <h3 className="bookmark__counter">Bookmarked Blogs : {titles.length}</h3>
+            <h3 className="bookmark__counter">Bookmarked Blogs : {bookmarkedBlogs.length}</h3>
 
-            {titles.map((title) => (
-               <Title title={title}></Title>
+            {bookmarkedBlogs.map((blog) => (
+               <Title title={blog.blogTitle}></Title>
             ))}
+
+            {/* <Title titles={titles}></Title> */}
          </div>
       </div>
    );
