@@ -74,3 +74,11 @@
    margin-top: 1rem;
    margin-bottom: 1rem;
 }
+
+.blog__bookmark-icon {
+   cursor: pointer;
+}
+
+.blog__bookmark-icon:hover {
+   color: var(--color-primary);
+}

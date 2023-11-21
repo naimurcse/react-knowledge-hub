@@ -11,11 +11,15 @@ const Blogs = () => {
          .then((data) => setBlogs(data));
    }, []);
 
+   const handleBookmark = (blog) => {
+      console.log(blog);
+   };
+
    return (
       <div className="blogs">
          <div className="blogs__container">
             {blogs.map((blog) => (
-               <Blog key={blog.id} blog={blog}></Blog>
+               <Blog key={blog.id} blog={blog} handleBookmark={handleBookmark}></Blog>
             ))}
          </div>
          <div className="blogs__bookmark">
