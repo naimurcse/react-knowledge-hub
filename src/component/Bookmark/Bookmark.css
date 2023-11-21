@@ -9,6 +9,7 @@
 
 .spent-time__text {
    color: var(--color-primary);
+   text-align: center;
 }
 
 .bookmark {
@@ -32,4 +33,12 @@
 .bookmark__title {
    line-height: 1.4;
    font-weight: 400;
+}
+
+/* Media Query for Button */
+@media only screen and (min-width: 768px) {
+   .bookmark__title {
+      line-height: 1.6;
+      font-weight: 600;
+   }
 }
