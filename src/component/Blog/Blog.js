@@ -6,9 +6,10 @@ import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 // import { faBookmark } from "@fortawesome/free-brands-svg-icons";
 
 const Blog = (props) => {
-   console.log(props);
-   const { blogCover, authorName, authorImage, blogTitle, readTime, publish } = props.blog;
+   // console.log(props);
+   const { id, blogCover, authorName, authorImage, blogTitle, readTime, publish } = props.blog;
    const handleBookmark = props.handleBookmark;
+   const readTimeCount = props.readTimeCount;
    return (
       <div className="blog">
          <img src={blogCover} alt="" className="blog__cover" />
@@ -25,7 +26,7 @@ const Blog = (props) => {
             </div>
             <div>
                <span className="blog__read-time">{readTime} min read </span>{" "}
-               <span className="blog__bookmark-icon" onClick={() => handleBookmark(blogTitle)}>
+               <span className="blog__bookmark-icon" onClick={() => handleBookmark(blogTitle, id)}>
                   <FontAwesomeIcon icon={faBookmark} />
                </span>
             </div>
@@ -34,7 +35,7 @@ const Blog = (props) => {
          <h2 className="blog__title">{blogTitle}</h2>
          <p className="blog__hash">#beginners</p>
          <p className="blog__hash">#programmer</p>
-         <a href="#" className="btn-secondary">
+         <a href="#" className="btn-secondary" onClick={() => readTimeCount(readTime)}>
             Mark as read
          </a>
       </div>

@@ -1,8 +1,3 @@
-.bookmark-section {
-   position: sticky;
-   top: 2rem;
-}
-
 .spent-time {
    background-color: var(--color-light-gray-bg);
    border-radius: 0.8rem;
