@@ -1,5 +1,7 @@
 //! spent-time ? totalTime += newTime : totalTime = newTime
 
+import { element } from "prop-types";
+
 // Add spent time to local storage
 const setSpentTimeToDb = (newTime) => {
    let spentTime = getSpentTime();
@@ -18,4 +20,21 @@ const getSpentTime = () => {
    return spentTime;
 };
 
-export { setSpentTimeToDb, getSpentTime };
+// set blog id to database
+const setBlogIdToDb = (id) => {
+   const storedBlogIds = getBlogIdsFromDb();
+   const alreadyExist = storedBlogIds.find((element) => element === id);
+   if (!alreadyExist) {
+      storedBlogIds.push(id);
+   }
+   localStorage.setItem("blog-id", JSON.stringify(storedBlogIds));
+};
+
+// To get blog id from database
+const getBlogIdsFromDb = () => {
+   const storedBlogIdsString = localStorage.getItem("blog-id");
+   const storedBlogIds = storedBlogIdsString ? JSON.parse(storedBlogIdsString) : [];
+   return storedBlogIds;
+};
+
+export { setSpentTimeToDb, getSpentTime, getBlogIdsFromDb, setBlogIdToDb };

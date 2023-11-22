@@ -19,8 +19,6 @@ const Bookmark = (props) => {
             {bookmarkedBlogs.map((blog) => (
                <Title title={blog.blogTitle}></Title>
             ))}
-
-            {/* <Title titles={titles}></Title> */}
          </div>
       </div>
    );

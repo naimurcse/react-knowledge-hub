@@ -2,8 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./Blogs.css";
 import Blog from "./../Blog/Blog";
 import Bookmark from "../Bookmark/Bookmark";
-import { toast } from "react-toastify";
-import { setSpentTimeToDb, getSpentTime } from "../../database/fakedb";
+
+import {
+   setSpentTimeToDb,
+   getSpentTime,
+   setBlogIdToDb,
+   getBlogIdsFromDb,
+} from "../../database/fakedb";
 
 const Blogs = () => {
    const [blogs, setBlogs] = useState([]);
@@ -16,8 +21,6 @@ const Blogs = () => {
          .then((data) => setBlogs(data));
    }, []);
 
-   const notify = () => toast.success("This is a success toast!");
-
    const handleBookmark = (newBlog) => {
       // console.log(newBlog);
       let newBookmark = [];
@@ -27,23 +30,34 @@ const Blogs = () => {
       } else {
          newBookmark = [...bookmark];
       }
-      // let newBookmark = [...bookmark, blog];
-      // console.log(savedBlog);
-      notify();
+
       setBookmark(newBookmark);
-      // console.log(bookmark);
+      setBlogIdToDb(newBlog.id);
    };
 
    const readTimeCount = (time) => {
       let totalSpentTime = spentTime + time;
-      setSpentTime(totalSpentTime);
       setSpentTimeToDb(time);
+      setSpentTime(totalSpentTime);
    };
 
    useEffect(() => {
       const totalSpentTime = getSpentTime();
       setSpentTime(totalSpentTime);
    }, []);
+
+   useEffect(() => {
+      const storedIds = getBlogIdsFromDb();
+      let savedBlogs = [];
+
+      storedIds.map((id) => {
+         const matchedBlog = blogs.find((blog) => blog.id === id);
+         if (matchedBlog) {
+            savedBlogs.push(matchedBlog);
+         }
+      });
+      setBookmark(savedBlogs);
+   }, [blogs]);
 
    return (
       <div className="blogs">
