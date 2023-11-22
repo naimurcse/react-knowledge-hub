@@ -10,14 +10,16 @@ const Bookmark = (props) => {
    return (
       <div className="bookmark-section">
          <div className="spent-time">
-            <h2 className="spent-time__text">Spent time on read : {spentTime} min</h2>
+            <h2 className="spent-time__text">
+               Spent time on read : {spentTime ? spentTime : 0} min
+            </h2>
          </div>
 
          <div className="bookmark">
             <h3 className="bookmark__counter">Bookmarked Blogs : {bookmarkedBlogs.length}</h3>
 
             {bookmarkedBlogs.map((blog) => (
-               <Title title={blog.blogTitle}></Title>
+               <Title title={blog.blogTitle} key={blog.id}></Title>
             ))}
          </div>
       </div>

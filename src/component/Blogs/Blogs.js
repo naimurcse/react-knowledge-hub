@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./Blogs.css";
 import Blog from "./../Blog/Blog";
 import Bookmark from "../Bookmark/Bookmark";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark, faBookmark as faBookmarkFilled } from "@fortawesome/free-solid-svg-icons";
 
 import {
    setSpentTimeToDb,
@@ -14,6 +16,7 @@ const Blogs = () => {
    const [blogs, setBlogs] = useState([]);
    const [bookmark, setBookmark] = useState([]);
    const [spentTime, setSpentTime] = useState(0);
+   // const [bookmarkedBlogs, setBookmarkedBlogs] = useState([]);
 
    useEffect(() => {
       fetch("blogsContent.json")
@@ -29,6 +32,7 @@ const Blogs = () => {
          newBookmark = [...bookmark, newBlog];
       } else {
          newBookmark = [...bookmark];
+         alert("It is you bookmaked blog!");
       }
 
       setBookmark(newBookmark);
