@@ -16,7 +16,6 @@ const Blogs = () => {
    const [blogs, setBlogs] = useState([]);
    const [bookmark, setBookmark] = useState([]);
    const [spentTime, setSpentTime] = useState(0);
-   // const [bookmarkedBlogs, setBookmarkedBlogs] = useState([]);
 
    useEffect(() => {
       fetch("blogsContent.json")
