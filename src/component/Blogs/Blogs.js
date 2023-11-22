@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./Blogs.css";
 import Blog from "./../Blog/Blog";
 import Bookmark from "../Bookmark/Bookmark";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark, faBookmark as faBookmarkFilled } from "@fortawesome/free-solid-svg-icons";
+
+import { Toaster } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 import {
    setSpentTimeToDb,
@@ -23,15 +24,21 @@ const Blogs = () => {
          .then((data) => setBlogs(data));
    }, []);
 
+   const showToast = (isSuccessful) => {
+      isSuccessful
+         ? toast.success("Successfully bookmarked :)")
+         : toast.error("Already bookmarked this blog!");
+   };
+
    const handleBookmark = (newBlog) => {
-      // console.log(newBlog);
       let newBookmark = [];
       const savedBlog = bookmark.find((blog) => blog.id === newBlog.id);
       if (!savedBlog) {
          newBookmark = [...bookmark, newBlog];
+         showToast(true);
       } else {
          newBookmark = [...bookmark];
-         alert("It is you bookmaked blog!");
+         showToast(false);
       }
 
       setBookmark(newBookmark);
@@ -64,6 +71,7 @@ const Blogs = () => {
 
    return (
       <div className="blogs">
+         <Toaster position="top-right" reverseOrder={false} />
          <div className="blogs__container">
             {blogs.map((blog) => (
                <Blog

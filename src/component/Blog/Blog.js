@@ -6,11 +6,7 @@ import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 // import { faBookmark } from "@fortawesome/free-brands-svg-icons";
 
 const Blog = ({ blog, handleBookmark, readTimeCount, currentIcon, isBookmarked }) => {
-   // console.log(props);
    const { id, blogCover, authorName, authorImage, blogTitle, readTime, publish } = blog;
-   // const handleBookmark = props.handleBookmark;
-   // const readTimeCount = props.readTimeCount;
-   // const currentIcon = props.currentIcon;
    console.log("isBookmarked", isBookmarked);
    return (
       <div className="blog">

@@ -1,5 +1,3 @@
-//! spent-time ? totalTime += newTime : totalTime = newTime
-
 import { element } from "prop-types";
 
 // Add spent time to local storage
