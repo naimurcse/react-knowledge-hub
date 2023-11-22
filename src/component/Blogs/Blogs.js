@@ -3,11 +3,13 @@ import "./Blogs.css";
 import Blog from "./../Blog/Blog";
 import Bookmark from "../Bookmark/Bookmark";
 import { toast } from "react-toastify";
+import { setSpentTimeToDb, getSpentTime } from "../../database/fakedb";
 
 const Blogs = () => {
    const [blogs, setBlogs] = useState([]);
    const [bookmark, setBookmark] = useState([]);
    const [spentTime, setSpentTime] = useState(0);
+
    useEffect(() => {
       fetch("blogsContent.json")
          .then((res) => res.json())
@@ -35,7 +37,13 @@ const Blogs = () => {
    const readTimeCount = (time) => {
       let totalSpentTime = spentTime + time;
       setSpentTime(totalSpentTime);
+      setSpentTimeToDb(time);
    };
+
+   useEffect(() => {
+      const totalSpentTime = getSpentTime();
+      setSpentTime(totalSpentTime);
+   }, []);
 
    return (
       <div className="blogs">
